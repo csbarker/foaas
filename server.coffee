@@ -38,83 +38,13 @@ app.use(express.static('./public'))
 app.use (req, res) ->
   res.sendfile("./public/index.html")
 
-app.get '/off/:name/:from', (req, res) ->
-  message = "Fuck off, #{req.params.name}."
-  subtitle = "- #{req.params.from}"
+app.get '/hi/:name/:from', (req, res) ->
+  message = "#{req.params.from} says Hi."
+  subtitle = "- #{req.params.name}"
   dooutput(res, message, subtitle)
 
-app.get '/you/:name/:from', (req, res) ->
+app.get '/hello/:name/:from', (req, res) ->
   message = "Fuck you, #{req.params.name}."
-  subtitle = "- #{req.params.from}"
-  dooutput(res, message, subtitle)
-
-app.get '/this/:from', (req, res) ->
-  message = "Fuck this."
-  subtitle = "- #{req.params. from}"
-  dooutput(res, message, subtitle)
-
-app.get '/that/:from', (req, res) ->
-  message = "Fuck that."
-  subtitle = "- #{req.params. from}"
-  dooutput(res, message, subtitle)
-
-app.get '/everything/:from', (req, res) ->
-  message = "Fuck everything."
-  subtitle = "- #{req.params. from}"
-  dooutput(res, message, subtitle)
-
-app.get '/everyone/:from', (req, res) ->
-  message = "Everyone can go and fuck off."
-  subtitle = "- #{req.params.from}"
-  dooutput(res, message, subtitle)
-
-app.get '/donut/:name/:from', (req, res) ->
-  message = "#{req.params.name}, go and take a flying fuck at a rolling donut."
-  subtitle = "- #{req.params.from}"
-  dooutput(res, message, subtitle)
-
-app.get '/shakespeare/:name/:from', (req, res) ->
-  message = "#{req.params.name}, Thou clay-brained guts, thou knotty-pated fool, thou whoreson obscene greasy tallow-catch!"
-  subtitle = "- #{req.params.from}"
-  dooutput(res, message, subtitle)
-
-app.get '/linus/:name/:from', (req, res) ->
-  message = "#{req.params.name}, there aren't enough swear-words in the English language, so now I'll have to call you perkeleen vittupää just to express my disgust and frustration with this crap."
-  subtitle = "- #{req.params.from}"
-  dooutput(res, message, subtitle)
-
-app.get '/king/:name/:from', (req, res) ->
-  message = "Oh fuck off, just really fuck off you total dickface. Christ #{req.params.name}, you are fucking thick."
-  subtitle = "- #{req.params.from}"
-  dooutput(res, message, subtitle)
-
-app.get '/pink/:from', (req, res) ->
-  message = "Well, Fuck me pink."
-  subtitle = "- #{req.params.from}"
-  dooutput(res, message, subtitle)
-
-app.get '/life/:from', (req, res) ->
-  message = "Fuck my life."
-  subtitle = "- #{req.params.from}"
-  dooutput(res, message, subtitle)
-
-app.get '/chainsaw/:name/:from', (req, res) ->
-  message = "Fuck me gently with a chainsaw, #{req.params.name}. Do I look like Mother Teresa?"
-  subtitle = "- #{req.params.from}"
-  dooutput(res, message, subtitle)
-
-app.get '/outside/:name/:from', (req, res) ->
-  message = "#{req.params.name}, why don't you go outside and play hide-and-go-fuck-yourself?"
-  subtitle = "- #{req.params.from}"
-  dooutput(res, message, subtitle)
-
-app.get '/thanks/:from', (req, res) ->
-  message = "Fuck you very much."
-  subtitle = "- #{req.params.from}"
-  dooutput(res, message, subtitle)
-
-app.get '/:thing/:from', (req, res) ->
-  message = "Fuck #{req.params.thing}."
   subtitle = "- #{req.params.from}"
   dooutput(res, message, subtitle)
 

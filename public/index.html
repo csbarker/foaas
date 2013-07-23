@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Fuck Off As A Service (FOAAS)</title>
+    <title>Say Hi For Me As A Service (SHFMAAS)</title>
 
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
   </head>
@@ -8,8 +8,8 @@
   <body style="">
     <div class="container">
       <div class="hero-unit">
-        <h1>FOAAS<h1>
-        <h2>Fuck Off As A Service</h2>
+        <h1>SHFMAAS<h1>
+        <h2>Say Hi For Me As A Service</h2>
         <p>Please see README for use.</p>
         <p><em>v0.0.1</em></p>
       </div>
@@ -17,11 +17,11 @@
     <div class="container">
       <div class="content" style="margin-left:50px;">
         <h2 id="introduction">Introduction</h2>
-        <p>FOAAS (Fuck Off As A Service) provides a modern, RESTful, scalable solution to the common problem of telling people to fuck off.</p>
+        <p>SHFMAAS (Say Hi For Me As A Service) provides a modern, RESTful, scalable solution to the common problem of telling people "Hi".</p>
 
         <h2 id="contentnegotiation">Content Negotiation</h2>
 
-        <p>FOAAS will respond to the following 'Accept:' values with appropriate content</p>
+        <p>SHFMAAS will respond to the following 'Accept:' values with appropriate content</p>
 
         <ul>
           <li>text/plain - Content will be returned as a plain string.</li>
@@ -31,13 +31,12 @@
 
         <h2 id="api">API</h2>
 
-        <h3 id="offnamefrom">/off/:name/:from</h3>
-
-        <p>Will return content of the form 'Fuck off, :name. - :from', e.g. /off/Tom/Chris will return 'Fuck off, Tom - Chris'</p>
-
-        <h3 id="younamefrom">/you/:name/:from</h3>
-
-        <p>Will return content of the form 'Fuck you, :name. - :from', e.g. /you/Tom/Chris will return 'Fuck you, Tom - Chris'</p>
+        <h3 id="offnamefrom">/hi/:from/:name</h3>
+        <p>Will return content of the form ':from says Hi. - :from', e.g. /hi/Tom/Chris will return 'Chris says Hi - Tom'</p>
+        
+        <h3 id="younamefrom">/hello/:from/:name</h3>
+        <p>Will return content of the form ':name says Hello. - :from', e.g. /hello/Tom/Chris will return 'Tom says Hello. - Chris'</p>
+        <!--
 
         <h3 id="thisfrom">/this/:from</h3>
 
@@ -90,6 +89,7 @@
         <h3 id="thanks">/thanks/:from</h3>
 
         <p>Will return content of the form 'Fuck you very much. - :from'. </p>
+        -->
 
         <h2 id="alturls">Alternative URLs</h2>
 
@@ -97,25 +97,13 @@
           <li><a href="http://foaas.herokuapp.com">http://foaas.herokuapp.com</a></li>
           <li><a href="http://foaas.com">http://foaas.com</a></li>
         </ul>
-
-        <h2 id="roadmap">Roadmap</h2>
-
-        <p>FOASS will be extended to include the following functionality:</p>
-
-        <ul>
-        <li>Random fuck offs (or Fuck Off of the Day), without having to specify the operation (off, you, everyone, donut etc) explicitly</li>
-        <li>Internationalization based on Accept-Language.</li>
-        </ul>
-
+        
         <p>All contributions are very welcome.</p>
 
-        <p>Not Written in <a href="http://mozart.io">Mozart</a>.</p>
-        <p>Follow <a href="https://twitter.com/foaas">@foaas</a> on twitter!</p>
-        <p>Fork me on <a href="https://github.com/xenph/foaas">github</a></p>
-
-        <p><em>- Dionysus</em></p>
+        <p>Site by <a href="http://cb.cm">Callum Barker</a>.</p>
+        <p>Inspired by <a href="https://github.com/xenph/foaas">FOAAS</a> by Dionysus</p>
+        
       </div>
     </div>
-    <script>!function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-42551488-1","herokuapp.com"),ga("send","pageview");</script>
   </body>
 </html>
