@@ -4,7 +4,7 @@ sanitizer = require 'sanitizer'
 template = (message, subtitle) -> '
 <html>
   <head>
-    <title>Fuck Off As A Service (FOAAS)</title>
+    <title>Say Hi As A Service (SHFMAAS)</title>
     <meta charset="utf-8">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
   </head>
@@ -39,12 +39,12 @@ app.use (req, res) ->
   res.sendfile("./public/index.html")
 
 app.get '/hi/:name/:from', (req, res) ->
-  message = "#{req.params.from} says Hi."
-  subtitle = "- #{req.params.name}"
+  message = "#{req.params.name} says Hi."
+  subtitle = "- #{req.params.from}"
   dooutput(res, message, subtitle)
 
 app.get '/hello/:name/:from', (req, res) ->
-  message = "Fuck you, #{req.params.name}."
+  message = "#{req.params.name} says Hello."
   subtitle = "- #{req.params.from}"
   dooutput(res, message, subtitle)
 
